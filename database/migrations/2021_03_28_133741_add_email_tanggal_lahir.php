@@ -26,7 +26,7 @@ class AddEmailTanggalLahir extends Migration
      */
     public function down()
     {
-        Schema::create('mahasiswas', function (Blueprint $table) {
+        Schema::table('mahasiswas', function (Blueprint $table) {
         });
     }
 }
