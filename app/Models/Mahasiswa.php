@@ -11,7 +11,6 @@ use Illuminate\Notifications\Notifiable;
 
 class Mahasiswa extends Model
 {
-    use HasFactory;
     protected $table ="mahasiswa"; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswas
     public $timestamps = false;
     protected $primaryKey = 'nim'; // Memanggil isi DB Dengan primarykey
