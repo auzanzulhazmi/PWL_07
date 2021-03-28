@@ -46,6 +46,8 @@ class MahasiswaController extends Controller
             'Kelas' => 'required',
             'Jurusan' => 'required',
             'No_Handphone' => 'required',
+            'Email' => 'required',
+            'Tanggal_lahir' => 'required',
             ]);
             //fungsi eloquent untuk menambah data
             Mahasiswa::create($request->all());
@@ -98,6 +100,8 @@ class MahasiswaController extends Controller
             'Kelas' => 'required',
             'Jurusan' => 'required',
             'No_Handphone' => 'required',
+            'Email' => 'required',
+            'Tanggal_lahir' => 'required',
         ]);
     }
 
