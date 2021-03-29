@@ -19,7 +19,7 @@ class MahasiswaController extends Controller
         // $posts = Mahasiswa::orderBy('Nim', 'desc')->paginate(6);
         // return view('mahasiswas.index', compact('mahasiswas'));
         // with('i', (request()->input('page', 1) - 1) * 5);
-        $mahasiswas1 = DB::table('mahasiswas')->simplePaginate(5);	
+        // $mahasiswas1 = DB::table('mahasiswas')->simplePaginate(5);	
         $mahasiswas = Mahasiswa::where([
             ['Nama','!=',Null],
             [function($query)use($request){
@@ -29,7 +29,9 @@ class MahasiswaController extends Controller
             }]
         ])
         ->orderBy('Nim','desc')
-        ->paginate(5);
+        // ->paginate(5);
+        ->simplePaginate(5);
+
 
         return view('mahasiswas.index' , compact('mahasiswas'))
         ->with('i',(request()->input('page',1)-1)*5);
